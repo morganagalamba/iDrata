@@ -24,6 +24,14 @@ class ViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
     
     var user: Person = Person(kg: 0, qtdAgua: 0.0, agua: 0.0)
@@ -41,11 +49,10 @@ class ViewController: UIViewController{
     
     func waterAmount(){
         //le o que esta escrito no text field de peso
-        let kg: String = textFieldKg.text!
+        let kg: String = textFieldKg.text  ?? "0"
         
         //transformar text em int
-        user.weight = Int(kg)!
-        
+        user.weight = Int(kg) ?? 0
         //Multiplica o valor escrito por 35 e divide por 1000
         user.water = (35*Float(user.weight))/1000
         
@@ -53,13 +60,11 @@ class ViewController: UIViewController{
     }
     
     func changeKg(){
-        let kg: String = textFieldKg2.text!
-        user.weight = Int(kg)!
+        let kg: String = textFieldKg2.text ?? "0"
+        user.weight = Int(kg) ?? 0
         user.water = (35*Float(user.weight))/1000
         atualizaTela()
     }
-    
-    
     
     @IBAction func plusButton30ml() {
         user.drinked(amount: 0.03)
@@ -90,7 +95,6 @@ class ViewController: UIViewController{
         waterAmount()
         blurView.isHidden = false
         greenView.isHidden = false
-        
     }
     @IBAction func okButton() {
         kgView.isHidden = true
