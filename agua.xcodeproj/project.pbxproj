@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D70777B424EB051D0057973E /* idrata.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D70777B224EB051D0057973E /* idrata.xcdatamodeld */; };
 		D7E1ABA8240D3099005B7218 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E1ABA7240D3099005B7218 /* AppDelegate.swift */; };
 		D7E1ABAA240D3099005B7218 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E1ABA9240D3099005B7218 /* SceneDelegate.swift */; };
 		D7E1ABAC240D3099005B7218 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E1ABAB240D3099005B7218 /* ViewController.swift */; };
@@ -17,7 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D7E1ABA4240D3099005B7218 /* agua.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = agua.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D70777B324EB051D0057973E /* idrata.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = idrata.xcdatamodel; sourceTree = "<group>"; };
+		D7E1ABA4240D3099005B7218 /* idrata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = idrata.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7E1ABA7240D3099005B7218 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7E1ABA9240D3099005B7218 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D7E1ABAB240D3099005B7218 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,7 +52,7 @@
 		D7E1ABA5240D3099005B7218 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D7E1ABA4240D3099005B7218 /* agua.app */,
+				D7E1ABA4240D3099005B7218 /* idrata.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,6 +62,7 @@
 			children = (
 				D7E1ABA7240D3099005B7218 /* AppDelegate.swift */,
 				D7E1ABA9240D3099005B7218 /* SceneDelegate.swift */,
+				D70777B224EB051D0057973E /* idrata.xcdatamodeld */,
 				D7E1ABAB240D3099005B7218 /* ViewController.swift */,
 				D7EF64652417D93B00EB22C2 /* Person.swift */,
 				D7E1ABAD240D3099005B7218 /* Main.storyboard */,
@@ -87,7 +90,7 @@
 			);
 			name = agua;
 			productName = agua;
-			productReference = D7E1ABA4240D3099005B7218 /* agua.app */;
+			productReference = D7E1ABA4240D3099005B7218 /* idrata.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -143,6 +146,7 @@
 			files = (
 				D7EF64662417D93B00EB22C2 /* Person.swift in Sources */,
 				D7E1ABAC240D3099005B7218 /* ViewController.swift in Sources */,
+				D70777B424EB051D0057973E /* idrata.xcdatamodeld in Sources */,
 				D7E1ABA8240D3099005B7218 /* AppDelegate.swift in Sources */,
 				D7E1ABAA240D3099005B7218 /* SceneDelegate.swift in Sources */,
 			);
@@ -297,7 +301,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.ufpe.com.academy.agua;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = idrata;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -316,7 +320,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.ufpe.com.academy.agua;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = idrata;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -344,6 +348,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D70777B224EB051D0057973E /* idrata.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D70777B324EB051D0057973E /* idrata.xcdatamodel */,
+			);
+			currentVersion = D70777B324EB051D0057973E /* idrata.xcdatamodel */;
+			path = idrata.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D7E1AB9C240D3099005B7218 /* Project object */;
 }
