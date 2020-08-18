@@ -8,18 +8,18 @@
 
 import Foundation
 
-class Person {
+public class Person{
         
-        var weight: Int
-        var waterDrinked: Float
-        var water: Float
-        var percentage: Float
+        public var weight: Int
+        public var waterDrinked: Float
+        public var water: Float
+        public var percentage: Float
         
-        init(kg: Int,qtdAgua: Float,agua: Float){
+        init(){
             self.percentage = 0
-            self.waterDrinked = qtdAgua
-            self.water = agua
-            self.weight = kg
+            self.waterDrinked = 0
+            self.water = 0
+            self.weight = 0
         }
         
         func drinked(amount:Float){
@@ -55,7 +55,6 @@ class Person {
             }
             self.percentage = (self.waterDrinked*100)/self.water
         }
-    
     
 }
 

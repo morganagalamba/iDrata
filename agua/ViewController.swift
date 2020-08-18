@@ -10,22 +10,31 @@ import UIKit
 
 class ViewController: UIViewController{
     
-    @IBOutlet var waterPercentage: UILabel!
+    
+    @IBOutlet weak var waterPercentage: UILabel!
     @IBOutlet var waterL: UILabel!
     @IBOutlet var waterFill: UIProgressView!
-    @IBOutlet weak var kgView: UIView!
-    @IBOutlet weak var textFieldKg: UITextField!
     @IBOutlet weak var kgLabel: UILabel!
-    @IBOutlet weak var blurView: UIVisualEffectView!
-    @IBOutlet weak var greenView: UIView!
-    @IBOutlet var textFieldKg2: UITextField!
     @IBOutlet var congratsView: UIView!
+    @IBOutlet weak var changeButton: UIButton!
+    //var first: UIViewController
+    //var first = FirstView()
+    var letras: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
-
+        /*waterL.text = String(format: "%.1f",first.user.waterDrinked)+"L de "+String(format:"%.1f",first.user.water)+"L"
+        waterPercentage.text = String(format: "%.0f",first.user.percentage) + "%"
+        waterFill.progress = Float(first.user.percentage)/100
+        kgLabel.text = String(first.user.weight)
+        kgLabel.text!.append("Kg")
+        if first.user.percentage == 100.0{
+            print("bebeu tudo")
+            //congratsView.isHidden = false
+        }*/
+        
         view.addGestureRecognizer(tap)
     }
     
@@ -34,84 +43,46 @@ class ViewController: UIViewController{
         view.endEditing(true)
     }
     
-    var user: Person = Person(kg: 0, qtdAgua: 0.0, agua: 0.0)
-    
-    func atualizaTela(){
-        waterL.text = String(format: "%.1f",user.waterDrinked)+"L de "+String(format:"%.1f",user.water)+"L"
-        waterPercentage.text = String(format: "%.0f",user.percentage) + "%"
-        waterFill.progress = Float(user.percentage)/100
-        kgLabel.text = String(user.weight)
+    /*func atualizaTela(){
+        waterL.text = String(format: "%.1f",first.user.waterDrinked)+"L de "+String(format:"%.1f",first.user.water)+"L"
+        waterPercentage.text = String(format: "%.0f",first.user.percentage) + "%"
+        waterFill.progress = Float(first.user.percentage)/100
+        kgLabel.text = String(first.user.weight)
         kgLabel.text!.append("Kg")
-        if user.percentage == 100.0{
+        if first.user.percentage == 100.0{
             congratsView.isHidden = false
         }
-    }
+    }*/
     
-    func waterAmount(){
-        //le o que esta escrito no text field de peso
-        let kg: String = textFieldKg.text  ?? "0"
-        
-        //transformar text em int
-        user.weight = Int(kg) ?? 0
-        //Multiplica o valor escrito por 35 e divide por 1000
-        user.water = (35*Float(user.weight))/1000
-        
-        atualizaTela()
-    }
-    
-    func changeKg(){
-        let kg: String = textFieldKg2.text ?? "0"
-        user.weight = Int(kg) ?? 0
-        user.water = (35*Float(user.weight))/1000
-        atualizaTela()
-    }
-    
-    @IBAction func plusButton30ml() {
-        user.drinked(amount: 0.03)
-        atualizaTela()
+   /* @IBAction func plusButton30ml() {
+        first.user.drinked(amount: 0.03)
     }
     
     @IBAction func lessButton30ml() {
-        user.notDrinked(amount: 0.03)
-        atualizaTela()
+        first.user.notDrinked(amount: 0.03)
     }
     @IBAction func plusButton200ml() {
-        user.drinked(amount: 0.2)
-        atualizaTela()
+        first.user.drinked(amount: 0.2)
     }
     @IBAction func lessButton200ml() {
-        user.notDrinked(amount: 0.2)
-        atualizaTela()
+        first.user.notDrinked(amount: 0.2)
     }
     @IBAction func plusButton500ml() {
-        user.drinked(amount: 0.5)
-        atualizaTela()
+        first.user.drinked(amount: 0.5)
     }
     @IBAction func lessButton500ml() {
-        user.notDrinked(amount: 0.5)
-        atualizaTela()
-    }
-    @IBAction func changeButton() {
-        waterAmount()
-        blurView.isHidden = false
-        greenView.isHidden = false
-    }
-    @IBAction func okButton() {
-        kgView.isHidden = true
-        waterAmount()
-    }
+        first.user.notDrinked(amount: 0.5)
 
-    @IBAction func okButton2() {
-        changeKg()
-        blurView.isHidden = true
-        greenView.isHidden = true
     }
+     
+     
     @IBAction func goBackButton() {
-        user.waterDrinked = 0.0
-        user.percentage = 0.0
-        congratsView.isHidden=true
-        waterAmount()
+        first.user.waterDrinked = 0.0
+        first.user.percentage = 0.0
+        //congratsView.isHidden=true
+    }*/
+    @IBAction func plusButton30ml() {
+        //print(first?.weight)
+        print(letras)
     }
-    
-    
 }

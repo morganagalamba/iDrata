@@ -3,4 +3,114 @@
    uuid = "D63D66BE-C838-4EAF-9971-20D93CC79176"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "83FA57D4-A004-4BF1-8B15-EBF4D4A36739"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "agua/ThirdViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "ThirdViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "83FA57D4-A004-4BF1-8B15-EBF4D4A36739 - 698447a1b7df5867"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "idrata.ThirdViewController.first.getter : idrata.FirstView"
+                  moduleName = "idrata"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/morganagalamba/Desktop/iDrata/agua/ThirdViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "126">
+               </Location>
+               <Location
+                  uuid = "83FA57D4-A004-4BF1-8B15-EBF4D4A36739 - 8da320e4dac03873"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "idrata.ThirdViewController.first.setter : idrata.FirstView"
+                  moduleName = "idrata"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/morganagalamba/Desktop/iDrata/agua/ThirdViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "164">
+               </Location>
+               <Location
+                  uuid = "83FA57D4-A004-4BF1-8B15-EBF4D4A36739 - 6121fe1bd92e9062"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "idrata.ThirdViewController.first.modify : idrata.FirstView"
+                  moduleName = "idrata"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/morganagalamba/Desktop/iDrata/agua/ThirdViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "83FA57D4-A004-4BF1-8B15-EBF4D4A36739 - c6433acaa8ac8273"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "idrata.ThirdViewController.first.modify : idrata.FirstView with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "idrata"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/morganagalamba/Desktop/iDrata/agua/ThirdViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "83FA57D4-A004-4BF1-8B15-EBF4D4A36739 - 425a24998acb34b5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "idrata.ThirdViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; idrata.ThirdViewController"
+                  moduleName = "idrata"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/morganagalamba/Desktop/iDrata/agua/ThirdViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "308">
+               </Location>
+               <Location
+                  uuid = "83FA57D4-A004-4BF1-8B15-EBF4D4A36739 - de81d5e56e42d30c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "idrata.ThirdViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;idrata.ThirdViewController&gt;"
+                  moduleName = "idrata"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/morganagalamba/Desktop/iDrata/agua/ThirdViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "231">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
