@@ -28,7 +28,7 @@ class FirstView: ViewController {
         
         //transformar text em int
         user.weight = Int(kg) ?? 0
-        
+        user.canFresh = true
         //Multiplica o valor escrito por 35 e divide por 1000
         user.water = (35*Float(user.weight))/1000
             let destVc = segue.destination as! ViewController
@@ -38,6 +38,7 @@ class FirstView: ViewController {
     /*override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         <#code#>
     }*/
+    
     
     @IBAction func okButton() {
         

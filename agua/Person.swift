@@ -14,12 +14,14 @@ public class Person{
         public var waterDrinked: Float
         public var water: Float
         public var percentage: Float
+    public var canFresh: Bool
         
         init(){
             self.percentage = 0
             self.waterDrinked = 0
             self.water = 0
             self.weight = 0
+            self.canFresh = false
         }
         
         func drinked(amount:Float){
