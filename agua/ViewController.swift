@@ -19,7 +19,7 @@ class ViewController: UIViewController{
     @IBOutlet weak var changeButton: UIButton!
     //var first: UIViewController
     //var first = FirstView()
-    var letras: String?
+    var first: Person?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,6 +83,6 @@ class ViewController: UIViewController{
     }*/
     @IBAction func plusButton30ml() {
         //print(first?.weight)
-        print(letras)
+        print(first?.weight)
     }
 }

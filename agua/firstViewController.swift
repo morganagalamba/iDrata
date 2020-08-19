@@ -23,18 +23,23 @@ class FirstView: ViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            let destVc = segue.destination as! ViewController
-            destVc.letras = sender as? String
-    }
-    
-    @IBAction func okButton() {
         //le o que esta escrito no text field de peso
         let kg: String = textFieldKg.text  ?? "0"
         
         //transformar text em int
         user.weight = Int(kg) ?? 0
+        
         //Multiplica o valor escrito por 35 e divide por 1000
         user.water = (35*Float(user.weight))/1000
+            let destVc = segue.destination as! ViewController
+            destVc.first = user
+    }
+    
+    /*override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        <#code#>
+    }*/
+    
+    @IBAction func okButton() {
         
         performSegue(withIdentifier: "qualquerNome", sender: self)
     }
