@@ -15,12 +15,24 @@ class FirstView: ViewController {
     
     var user = PersonClass()
     var personCoreData: [NSManagedObject] = []
+    let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+        
+        if defaults.bool(forKey: "First Launch") == true {
+            print("segunda")
 
+            defaults.set(true,forKey: "First Launch")
+        }
+        else {
+            print("primeira")
+            defaults.set(true,forKey: "First Launch")
+            
+
+        }
         view.addGestureRecognizer(tap)
     }
     

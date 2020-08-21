@@ -17,13 +17,13 @@ class ViewController: UIViewController{
     @IBOutlet var kgLabel: UILabel!
     //@IBOutlet var waterFill: UIProgressView!
     @IBOutlet var waterFill: UIProgressView!
-    
     var first: PersonClass?
     var person: [NSManagedObject] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         if first?.canFresh == true {
             atualizaTela()
@@ -62,6 +62,7 @@ class ViewController: UIViewController{
             
             self.person[0].setValue(Int(newKg), forKey: "weight")
             self.person[0].setValue((35*(self.person[0].value(forKey: "weight") as! Float)/1000), forKey: "water")
+            self.person[0].setValue(((self.person[0].value(forKey: "waterDrinked") as! Float)*100)/(self.person[0].value(forKey: "water") as! Float), forKey: "percentage")
             self.atualizaTela()
           
         }
@@ -75,6 +76,7 @@ class ViewController: UIViewController{
         alert.addAction(cancelAction)
         
         present(alert, animated: true)
+        self.atualizaTela()
     }
     
     func drinked(amount:Float){
@@ -85,7 +87,7 @@ class ViewController: UIViewController{
             person[0].setValue(person[0].value(forKey: "water") as! Float,forKey: "waterDrinked")
         }
         
-        person[0].setValue(((person[0].value(forKey: "water") as! Float)*100)/(person[0].value(forKey: "water") as! Float), forKey: "percentage")
+        person[0].setValue(((person[0].value(forKey: "waterDrinked") as! Float)*100)/(person[0].value(forKey: "water") as! Float), forKey: "percentage")
     }
     
     func notDrinked(amount:Float){
@@ -96,7 +98,7 @@ class ViewController: UIViewController{
             person[0].setValue(0,forKey: "waterDrinked")
         }
         
-        person[0].setValue(((person[0].value(forKey: "water") as! Float)*100)/(person[0].value(forKey: "water") as! Float), forKey: "percentage")
+        person[0].setValue(((person[0].value(forKey: "waterDrinked") as! Float)*100)/(person[0].value(forKey: "water") as! Float), forKey: "percentage")
     }
     
     @IBAction func plusButton30ml() {
@@ -111,6 +113,7 @@ class ViewController: UIViewController{
     
     @IBAction func lessButton30ml() {
         notDrinked(amount: 0.03)
+        atualizaTela()
     }
     
     @IBAction func plusButton200ml() {
