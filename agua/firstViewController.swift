@@ -24,7 +24,7 @@ class FirstView: ViewController {
         
         if defaults.bool(forKey: "First Launch") == true {
             print("segunda")
-
+            performSegue(withIdentifier: "secondLaunch", sender: nil)
             defaults.set(true,forKey: "First Launch")
         }
         else {
@@ -41,14 +41,13 @@ class FirstView: ViewController {
         let kg: String = textFieldKg.text  ?? "0"
         //transformar text em int
         user.weight = Int(kg) ?? 0
-        print(user.weight)
         user.canFresh = true
         user.water = (35*Float(user.weight))/1000
-
+        
         //Multiplica o valor escrito por 35 e divide por 1000
         self.save(weight: user.weight, percentage: user.percentage, water: user.water, waterDrinked: user.waterDrinked)
         
-                let destVc = segue.destination as! ViewController
+        let destVc = segue.destination as! ViewController
         destVc.first = user
         destVc.person = personCoreData
     }
@@ -106,11 +105,4 @@ class FirstView: ViewController {
     /*override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         <#code#>
     }*/
-    
-    
-    @IBAction func okButton() {
-        
-        performSegue(withIdentifier: "qualquerNome", sender: self)
-    }
-    
 }

@@ -41,7 +41,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="ok" image="ok"/>
                                 <connections>
-                                    <segue destination="Tdx-lg-gBk" kind="modal" animates="NO" modalPresentationStyle="fullScreen" id="fJJ-Qh-6OJ"/>
+                                    <segue destination="Tdx-lg-gBk" kind="modal" identifier="" animates="NO" modalPresentationStyle="fullScreen" id="fJJ-Qh-6OJ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -50,7 +50,7 @@
                     </view>
                     <connections>
                         <outlet property="textFieldKg" destination="Nnn-Lf-bcZ" id="Xp9-pU-8CT"/>
-                        <segue destination="Tdx-lg-gBk" kind="modal" identifier="qualquerNome" animates="NO" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="0hZ-ae-nMP"/>
+                        <segue destination="Tdx-lg-gBk" kind="modal" identifier="secondLaunch" animates="NO" modalPresentationStyle="fullScreen" id="0hZ-ae-nMP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
