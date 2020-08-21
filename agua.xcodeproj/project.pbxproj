@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D70777B424EB051D0057973E /* idrata.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D70777B224EB051D0057973E /* idrata.xcdatamodeld */; };
+		D70CBDA424EF17DE00CA23C4 /* idrata.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D70777B224EB051D0057973E /* idrata.xcdatamodeld */; };
 		D712BBA724EC4F8B00F97978 /* CongratsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D712BBA624EC4F8B00F97978 /* CongratsView.swift */; };
 		D712BBAB24EC882500F97978 /* firstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D712BBAA24EC882500F97978 /* firstViewController.swift */; };
 		D7E1ABA8240D3099005B7218 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E1ABA7240D3099005B7218 /* AppDelegate.swift */; };
@@ -150,10 +150,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D70CBDA424EF17DE00CA23C4 /* idrata.xcdatamodeld in Sources */,
 				D712BBA724EC4F8B00F97978 /* CongratsView.swift in Sources */,
 				D7EF64662417D93B00EB22C2 /* Person.swift in Sources */,
 				D7E1ABAC240D3099005B7218 /* ViewController.swift in Sources */,
-				D70777B424EB051D0057973E /* idrata.xcdatamodeld in Sources */,
 				D7E1ABA8240D3099005B7218 /* AppDelegate.swift in Sources */,
 				D7E1ABAA240D3099005B7218 /* SceneDelegate.swift in Sources */,
 				D712BBAB24EC882500F97978 /* firstViewController.swift in Sources */,

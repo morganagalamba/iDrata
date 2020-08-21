@@ -8,13 +8,13 @@
 
 import Foundation
 
-public class Person{
+public class PersonClass{
         
         public var weight: Int
         public var waterDrinked: Float
         public var water: Float
         public var percentage: Float
-    public var canFresh: Bool
+        public var canFresh: Bool
         
         init(){
             self.percentage = 0

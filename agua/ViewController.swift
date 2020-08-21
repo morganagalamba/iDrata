@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController{
     
@@ -17,7 +18,8 @@ class ViewController: UIViewController{
     //@IBOutlet var waterFill: UIProgressView!
     @IBOutlet var waterFill: UIProgressView!
     
-    var first: Person?
+    var first: PersonClass?
+    var person: [NSManagedObject] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,12 +37,12 @@ class ViewController: UIViewController{
     }
     
     func atualizaTela(){
-        waterL.text = String(format: "%.1f",first!.waterDrinked)+"L de "+String(format:"%.1f",first!.water)+"L"
-        waterPercentage.text = String(format: "%.0f",first!.percentage) + "%"
-        waterFill.progress = Float(first!.percentage)/100
-        kgLabel.text = String(first!.weight)
+        waterL.text = String(format: "%.1f",(person[0].value(forKey: "waterDrinked") as! Float))+"L de "+String(format:"%.1f",(person[0].value(forKey: "water") as! Float))+"L"
+        waterPercentage.text = String(format: "%.0f",(person[0].value(forKey: "percentage") as! Float)) + "%"
+        waterFill.progress = ((person[0].value(forKey: "percentage") as! Float)/100.0)
+        kgLabel.text = String(person[0].value(forKey: "weight") as! Float)
         kgLabel.text!.append("Kg")
-        if first?.percentage == 100.0{
+        if (person[0].value(forKey: "percentage") as! Float) == 100.0{
             print("bebeu tudo")
         }
     }
@@ -57,9 +59,9 @@ class ViewController: UIViewController{
             let newKg = textField.text else {
               return
           }
-          
-            self.first?.weight = Int(newKg)!
-            self.first?.water = (35*Float(self.first!.weight))/1000
+            
+            self.person[0].setValue(Int(newKg), forKey: "weight")
+            self.person[0].setValue((35*(self.person[0].value(forKey: "weight") as! Float)/1000), forKey: "water")
             self.atualizaTela()
           
         }
@@ -75,33 +77,59 @@ class ViewController: UIViewController{
         present(alert, animated: true)
     }
     
+    func drinked(amount:Float){
+        
+        person[0].setValue(person[0].value(forKey: "waterDrinked") as! Float + amount, forKey: "waterDrinked")
+    
+        if (person[0].value(forKey: "waterDrinked") as! Float) > (person[0].value(forKey: "water") as! Float){
+            person[0].setValue(person[0].value(forKey: "water") as! Float,forKey: "waterDrinked")
+        }
+        
+        person[0].setValue(((person[0].value(forKey: "water") as! Float)*100)/(person[0].value(forKey: "water") as! Float), forKey: "percentage")
+    }
+    
+    func notDrinked(amount:Float){
+        
+        person[0].setValue(person[0].value(forKey: "waterDrinked") as! Float - amount, forKey: "waterDrinked")
+        
+        if (person[0].value(forKey: "waterDrinked") as! Float) < 0 {
+            person[0].setValue(0,forKey: "waterDrinked")
+        }
+        
+        person[0].setValue(((person[0].value(forKey: "water") as! Float)*100)/(person[0].value(forKey: "water") as! Float), forKey: "percentage")
+    }
+    
     @IBAction func plusButton30ml() {
         //print(first?.weight)
-        first!.drinked(amount: 0.03)
+        drinked(amount: 0.03)
+        if (person[0].value(forKey: "percentage") as! Float) == 100.0 {
+            person[0].setValue(0.0,forKey: "percentage")
+            person[0].setValue(0.0,forKey: "waterDrinked")
+        }
         atualizaTela()
     }
     
     @IBAction func lessButton30ml() {
-        first!.notDrinked(amount: 0.03)
+        notDrinked(amount: 0.03)
     }
     
     @IBAction func plusButton200ml() {
-        first!.drinked(amount: 0.2)
+        drinked(amount: 0.2)
         atualizaTela()
     }
     
     @IBAction func lessButton200ml() {
-        first!.notDrinked(amount: 0.2)
+        notDrinked(amount: 0.2)
         atualizaTela()
     }
     
     @IBAction func plusButton500ml() {
-        first!.drinked(amount: 0.5)
+        drinked(amount: 0.5)
         atualizaTela()
     }
     
     @IBAction func lessButton500ml() {
-        first!.notDrinked(amount: 0.5)
+        notDrinked(amount: 0.5)
         atualizaTela()
     }
 }
